@@ -1,6 +1,6 @@
 {
   "name": "joi-currency-code",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Joi validator that validates whether a given input is a valid currency code, according to ISO 4217",
   "scripts": {
     "test": "xo && ava"
@@ -38,6 +38,6 @@
     "xo": "^0.18.2"
   },
   "dependencies": {
-    "is-currency": "^1.2.0"
+    "is-currency": "^1.3.0"
   }
 }
