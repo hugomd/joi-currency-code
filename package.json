@@ -1,0 +1,43 @@
+{
+  "name": "joi-currency-code",
+  "version": "1.0.0",
+  "description": "A Joi validator that validates whether a given input is a valid currency code, according to ISO 4217",
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "ava": {
+    "verbose": true
+  },
+  "xo": {
+    "space": true,
+    "rules": {
+      "curly": 0,
+      "no-negated-condition": 0
+    }
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugomd/joi-currency-code.git"
+  },
+  "author": {
+    "name": "Hugo Muller-Downing",
+    "email": "npmjs@hugo.sx",
+    "url": "hu.md"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugomd/joi-currency-code/issues"
+  },
+  "homepage": "https://github.com/hugomd/joi-currency-code#readme",
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "joi": "^10.5.2",
+    "xo": "^0.18.2"
+  },
+  "dependencies": {
+    "is-currency": "^1.2.0"
+  }
+}
