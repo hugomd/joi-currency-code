@@ -1,4 +1,4 @@
-const isCurrency = require('is-currency');
+const isCurrencyCode = require('is-currency-code');
 
 module.exports = Joi => {
   return Joi.extend(Joi => ({
@@ -11,7 +11,7 @@ module.exports = Joi => {
       {
         name: 'currency',
         validate(params, value, state, options) {
-          if (!isCurrency(value)) {
+          if (!isCurrencyCode(value)) {
             return this.createError('string.currency', {v: value}, state, options);
           }
 

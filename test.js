@@ -22,9 +22,17 @@ test('should fail if currency code is invalid', t => {
   t.is(message, 'child "code" fails because ["code" needs to be a valid ISO 4217 currency code]');
 });
 
-test('should fail if currency code type is invalid', t => {
+test('should fail if currency code type is boolean', t => {
   const {error: {message}} = Joi.validate({
     code: 123
+  }, schema);
+
+  t.is(message, 'child "code" fails because ["code" must be a string]');
+});
+
+test('should fail if currency code type is object', t => {
+  const {error: {message}} = Joi.validate({
+    code: {}
   }, schema);
 
   t.is(message, 'child "code" fails because ["code" must be a string]');
