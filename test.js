@@ -1,6 +1,6 @@
 const test = require('ava');
 const JoiBase = require('joi');
-const Joi = require('./index')(JoiBase);
+const Joi = require('./src/joi-currency-code')(JoiBase);
 
 const schema = Joi.object({
   code: Joi.string().currency()
