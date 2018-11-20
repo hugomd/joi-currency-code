@@ -33,11 +33,11 @@
   },
   "homepage": "https://github.com/hugomd/joi-currency-code#readme",
   "devDependencies": {
-    "ava": "^0.19.1",
-    "joi": "^10.5.2",
-    "xo": "^0.18.2"
+    "ava": "^0.25.0",
+    "xo": "^0.23.0"
   },
   "dependencies": {
+    "joi": "^14.1.0",
     "is-currency-code": "1.2.0"
   }
 }
