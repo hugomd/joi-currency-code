@@ -11,7 +11,7 @@ test('should succeed if currency code is valid', t => {
     code: 'aud'
   }, schema);
 
-  t.deepEqual(output.value, {code: 'aud'});
+  t.deepEqual(output.value, {code: 'AUD'});
 });
 
 test('should fail if currency code is invalid', t => {

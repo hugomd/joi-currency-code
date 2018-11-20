@@ -15,7 +15,7 @@ module.exports = Joi => {
             return this.createError('string.currency', {v: value}, state, options);
           }
 
-          return value;
+          return value.toUpperCase();
         }
       }
     ]
