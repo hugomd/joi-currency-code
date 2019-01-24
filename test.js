@@ -6,9 +6,17 @@ const schema = Joi.object({
   code: Joi.string().currency()
 });
 
-test('should succeed if currency code is valid', t => {
+test('should succeed if currency code is valid - lowercase', t => {
   const output = Joi.validate({
     code: 'aud'
+  }, schema);
+
+  t.deepEqual(output.value, {code: 'AUD'});
+});
+
+test('should succeed if currency code is valid - uppercase', t => {
+  const output = Joi.validate({
+    code: 'AUD'
   }, schema);
 
   t.deepEqual(output.value, {code: 'AUD'});
