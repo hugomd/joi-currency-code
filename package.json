@@ -16,7 +16,8 @@
     }
   },
   "files": [
-    "index.js"
+    "index.js",
+    "./src/joi-currency-code.js"
   ],
   "repository": {
     "type": "git",
