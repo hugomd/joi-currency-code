@@ -1,6 +1,6 @@
 {
   "name": "joi-currency-code",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A Joi validator that validates whether a given input is a valid currency code, according to ISO 4217",
   "scripts": {
     "test": "xo && ava"
@@ -17,7 +17,7 @@
   },
   "files": [
     "index.js",
-    "./src/joi-currency-code.js"
+    "src/joi-currency-code.js"
   ],
   "repository": {
     "type": "git",
