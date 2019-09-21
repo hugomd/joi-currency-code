@@ -1,23 +1,22 @@
 const isCurrencyCode = require('is-currency-code');
 
-module.exports = Joi => {
-  return Joi.extend(Joi => ({
-    name: 'string',
-    base: Joi.string(),
-    language: {
-      currency: 'needs to be a valid ISO 4217 currency code'
+module.exports = joi => {
+  return {
+    base: joi.string(),
+    type: 'string',
+    messages: {
+      'currency.base': '"{{#label}}" must be a valid ISO 4217 currency code'
     },
-    rules: [
-      {
-        name: 'currency',
-        validate(params, value, state, options) {
+    rules: {
+      currency: {
+        validate(value, helpers) {
           if (!isCurrencyCode(value)) {
-            return this.createError('string.currency', {v: value}, state, options);
+            return helpers.error('currency.base');
           }
 
           return value.toUpperCase();
         }
       }
-    ]
-  }));
+    }
+  };
 };
