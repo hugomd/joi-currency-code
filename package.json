@@ -1,9 +1,10 @@
 {
   "name": "joi-currency-code",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "A Joi validator that validates whether a given input is a valid currency code, according to ISO 4217",
   "scripts": {
-    "test": "xo && ava"
+    "pretest": "xo",
+    "test": "ava"
   },
   "ava": {
     "verbose": true
@@ -34,9 +35,12 @@
   },
   "homepage": "https://github.com/hugomd/joi-currency-code#readme",
   "devDependencies": {
+    "@hapi/joi": "^16.1.4",
     "ava": "^1.4.1",
-    "joi": "^14.3.0",
     "xo": "^0.24.0"
+  },
+  "peerDependencies": {
+    "@hapi/joi": "^16.1.4"
   },
   "dependencies": {
     "is-currency-code": "1.2.0"
