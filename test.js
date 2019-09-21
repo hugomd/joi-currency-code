@@ -1,47 +1,47 @@
 const test = require('ava');
-const JoiBase = require('joi');
-const Joi = require('./src/joi-currency-code')(JoiBase);
+const Joi = require('@hapi/joi')
+  .extend(require('./src/joi-currency-code'));
 
 const schema = Joi.object({
   code: Joi.string().currency()
 });
 
 test('should succeed if currency code is valid - lowercase', t => {
-  const output = Joi.validate({
+  const output = schema.validate({
     code: 'aud'
-  }, schema);
+  });
 
   t.deepEqual(output.value, {code: 'AUD'});
 });
 
 test('should succeed if currency code is valid - uppercase', t => {
-  const output = Joi.validate({
+  const output = schema.validate({
     code: 'AUD'
-  }, schema);
+  });
 
   t.deepEqual(output.value, {code: 'AUD'});
 });
 
 test('should fail if currency code is invalid', t => {
-  const {error: {message}} = Joi.validate({
+  const {error: {message}} = schema.validate({
     code: 'fake-currency'
-  }, schema);
+  });
 
-  t.is(message, 'child "code" fails because ["code" needs to be a valid ISO 4217 currency code]');
+  t.is(message, '"code" must be a valid ISO 4217 currency code');
 });
 
 test('should fail if currency code type is boolean', t => {
-  const {error: {message}} = Joi.validate({
+  const {error: {message}} = schema.validate({
     code: 123
-  }, schema);
+  });
 
-  t.is(message, 'child "code" fails because ["code" must be a string]');
+  t.is(message, '"code" must be a string');
 });
 
 test('should fail if currency code type is object', t => {
-  const {error: {message}} = Joi.validate({
+  const {error: {message}} = schema.validate({
     code: {}
-  }, schema);
+  });
 
-  t.is(message, 'child "code" fails because ["code" must be a string]');
+  t.is(message, '"code" must be a string');
 });
