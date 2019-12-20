@@ -13,7 +13,7 @@ npm install joi-currency-code
 ## Usage
 
 ```javascript
-const Joi = require('joi-currency-code')(require('joi'));
+const Joi = require('joi-currency-code')(require('@hapi/joi'));
 
 const schema = Joi.object({
   code: Joi.string().currency()
