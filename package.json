@@ -1,6 +1,6 @@
 {
   "name": "joi-currency-code",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A Joi validator that validates whether a given input is a valid currency code, according to ISO 4217",
   "scripts": {
     "pretest": "xo",
