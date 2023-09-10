@@ -35,12 +35,12 @@
   },
   "homepage": "https://github.com/hugomd/joi-currency-code#readme",
   "devDependencies": {
-    "@hapi/joi": "^16.1.4",
+    "joi": "^17.10.1",
     "ava": "^1.4.1",
     "xo": "^0.24.0"
   },
   "peerDependencies": {
-    "@hapi/joi": "^16.1.4"
+    "joi": "^17.10.1"
   },
   "dependencies": {
     "is-currency-code": "1.2.0"

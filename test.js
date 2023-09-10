@@ -1,5 +1,5 @@
 const test = require('ava');
-const Joi = require('@hapi/joi')
+const Joi = require('joi')
   .extend(require('./src/joi-currency-code'));
 
 const schema = Joi.object({
