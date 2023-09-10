@@ -13,7 +13,9 @@
     "space": true,
     "rules": {
       "curly": 0,
-      "no-negated-condition": 0
+      "no-negated-condition": 0,
+      "unicorn/prefer-module": 0,
+      "import/extensions": 0
     }
   },
   "files": [
