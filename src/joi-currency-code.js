@@ -5,7 +5,7 @@ module.exports = joi => {
     base: joi.string(),
     type: 'string',
     messages: {
-      'currency.base': '"{{#label}}" must be a valid ISO 4217 currency code'
+      'currency.base': '{{#label}} must be a valid ISO 4217 currency code'
     },
     rules: {
       currency: {
