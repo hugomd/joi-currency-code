@@ -1,6 +1,6 @@
 # 💰 joi-currency-code
 
-[![npm](https://img.shields.io/npm/v/joi-currency-code.svg?maxAge=2592000)](https://www.npmjs.com/package/joi-currency-code) [![Build Status](https://travis-ci.org/hugomd/joi-currency-code.svg?branch=master)](https://travis-ci.org/hugomd/joi-currency-code/builds) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) 
+[![npm](https://img.shields.io/npm/v/joi-currency-code.svg?maxAge=2592000)](https://www.npmjs.com/package/joi-currency-code) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) 
 
 > A Joi validator that validates whether a given input is a valid currency code, according to ISO 4217.
 
